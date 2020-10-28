@@ -6,7 +6,6 @@ namespace HSP_Zahnrad_3
     {
         static void Main(string[] args)
         {
-// Updated upstream
             
             //Parametereingabe
             Console.WriteLine("Geben Sie den Modul ein");
@@ -17,31 +16,30 @@ namespace HSP_Zahnrad_3
             double d = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Geben Sie die Breite ein");
             double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Geben Sie die Zähnezahl ein");
-            double z = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Bitte geben Sie den Winkel a ein");
             double a = Convert.ToDouble(Console.ReadLine());
 
 
-
-            double p = Math.Pi * m;
+            //Berechnungen
+            double p = Math.PI * m;
             double c = 0.167 * m;
             double df = d - 2 * (m + c);
             double da = m * (z + 2);
             double hf = m + c;
             double ha = m;
             double R = Math.Cos(a);
-
             double db = z * m * R;
-
+            double h = 2 * m + c;
+            
             //Ausgabe
-            Console.WriteLine("Ergebnis für die Zahnkopfhöhe:" + ha + "cm");
-            Console.WriteLine("Ergebnis für die Zahnfußöhe:" + hf + "cm");
+            Console.WriteLine("Ergebnis für die Zahnhöhe:" + h + "mm");
+            Console.WriteLine("Ergebnis für die Zahnkopfhöhe:" + ha + "mm");
+            Console.WriteLine("Ergebnis für die Zahnfußöhe:" + hf + "mm");
             Console.WriteLine("Ergebnis für die Teilung:" + p);
-            Console.WriteLine("Ergebnis für den Grundkreisdurchmesser:" + db + "cm ");
-            Console.WriteLine("Ergebnis für den Kopfkreisdurchmesser:" + da + "cm");
+            Console.WriteLine("Ergebnis für den Grundkreisdurchmesser:" + db + "mm ");
+            Console.WriteLine("Ergebnis für den Kopfkreisdurchmesser:" + da + "mm");
+            Console.WriteLine("Ergebnis für den Fußkreisdurchmesser:" + df+"mm");
 
-//Stashed changes
         }
     }
 }
