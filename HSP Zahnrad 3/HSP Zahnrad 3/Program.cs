@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collection.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +12,7 @@ namespace HSP_Zahnrad_3
             string Ende;
             do
             {
-                //Parametereingabe
+                //Ausgabe: Welche Werte werden gesucht?
                 Console.WriteLine("Wenn Grundkreisdurchmesser gesucht wird, drücken Sie 1");
                 Console.WriteLine("Wenn Zahnkopfhöhe gesucht wird, drücken Sie 2");
                 Console.WriteLine("Wenn Zahnfußhöhe gesucht wird, drücken Sie 3");
@@ -21,13 +20,13 @@ namespace HSP_Zahnrad_3
                 Console.WriteLine("Wenn Teilung gesucht wird, drücken Sie 5");
                 Console.WriteLine("Wenn Zahnhöhe gesucht wird, drücken Sie 6");
 
-
+                //Eingabe der auszuführenden Funktion
                 int Eingabe = 0;
-
+                
                 Eingabe = Convert.ToInt32(Console.ReadLine());
 
 
-
+                //Berechnungen für Eingabe = 1
                 if (Eingabe == 1)
 
 
@@ -44,6 +43,7 @@ namespace HSP_Zahnrad_3
 
                 }
 
+                //Berechnungen für Eingabe = 2
                 else if (Eingabe == 2)
 
                 {
@@ -54,6 +54,7 @@ namespace HSP_Zahnrad_3
 
                 }
 
+                //Berechnungen für Eingabe = 3
                 else if (Eingabe == 3)
 
                 {
@@ -67,6 +68,7 @@ namespace HSP_Zahnrad_3
 
                 }
 
+                //Berechnungen für Eingabe = 4
                 else if (Eingabe == 4)
 
                 {
@@ -78,6 +80,8 @@ namespace HSP_Zahnrad_3
                     double df = d - 2 * (m + c);
                     Console.WriteLine("Ergebnis für den Fußkreisdurchmesser:" + df + "mm");
                 }
+
+                //Berechnungen für Eingabe = 5
                 else if (Eingabe == 5)
                 {
                     Console.WriteLine("Geben Sie den Modul ein");
@@ -87,6 +91,7 @@ namespace HSP_Zahnrad_3
 
                 }
 
+                //Berechnungen für Eingabe = 6 
                 else if (Eingabe == 6)
 
                 {
@@ -98,13 +103,14 @@ namespace HSP_Zahnrad_3
 
 
                 }
+                //Frage ob das Programm beendet werden soll oder weitere Werte benötigt werden
                 Console.WriteLine("Wenn Sie das Programm beenden möchten, geben Sie Ende ein. Andernfalls können weitere Berechnungen ausgeführt werden.");
                 Ende = Console.ReadLine();
                 Console.ReadKey();
 
 
-
-            } while (Ene != "Ende");
+                //Programm wird beendet
+            } while (Ende != "Ende");
         }
     }
 }
